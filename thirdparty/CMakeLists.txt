@@ -36,6 +36,6 @@ ExternalProject_Add(GoogleTest
   CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${GLOBAL_OUTPUT_PATH}/googletest
   -DCMAKE_C_COMPILER=${CMAKE_C_COMPILER}
   -DCMAKE_CXX_COMPILER=${CMAKE_CXX_COMPILER}
-
+  -DCMAKE_CXX_FLAGS="-Wno-error=maybe-uninitialized"
   INSTALL_DIR "${GLOBAL_OUTPUT_PATH}/googletest"
   )
